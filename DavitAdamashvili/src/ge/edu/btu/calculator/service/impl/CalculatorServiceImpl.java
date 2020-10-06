@@ -9,18 +9,20 @@ public class CalculatorServiceImpl implements CalculatorService {
     final static Logger logger=Logger.getLogger(CalculatorServiceImpl.class);
     @Override
     public int sum(int x, int y) {
+        logger.info("info: " + x + " + " + y);
         return x + y;
     }
 
     @Override
     public double sum(double x, double y) {
-        double sum = x + y;
-        return sum;
+        logger.info("info: " + x + " + " + y);
+        return x + y;
     }
 
     @Override
     public double divide(int x, int y) {
         try{
+            logger.info("info: " + x + " / " + y);
             return x/y;
         }catch (ArithmeticException e){
             logger.error("Error: " + e.getMessage());
@@ -32,6 +34,7 @@ public class CalculatorServiceImpl implements CalculatorService {
     @Override
     public double divide(double x, double y) {
         try{
+            logger.info("info: " + x + " / " + y);
             return x/y;
         }catch (ArithmeticException e){
             logger.error("Error: " + e.getMessage());
